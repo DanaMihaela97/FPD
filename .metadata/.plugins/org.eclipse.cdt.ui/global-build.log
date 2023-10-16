@@ -1,0 +1,477 @@
+18:33:57 **** Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01.d" -MT"src/FPD_01.o" -o "src/FPD_01.o" "../src/FPD_01.c"
+Finished building: ../src/FPD_01.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o   
+Finished building target: FPD_01
+ 
+18:39:06 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01.d" -MT"src/FPD_01.o" -o "src/FPD_01.o" "../src/FPD_01.c"
+Finished building: ../src/FPD_01.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o   
+Finished building target: FPD_01
+ 
+18:39:55 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01.d" -MT"src/FPD_01.o" -o "src/FPD_01.o" "../src/FPD_01.c"
+Finished building: ../src/FPD_01.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o   
+Finished building target: FPD_01
+ 
+19:01:46 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01.d" -MT"src/FPD_01.o" -o "src/FPD_01.o" "../src/FPD_01.c"
+Finished building: ../src/FPD_01.c
+ 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+../src/FPD_01b.c: In function ‘main’:
+../src/FPD_01b.c:46:85: warning: passing argument 7 of ‘MPI_Isend’ from incompatible pointer type [-Wincompatible-pointer-types]
+   46 |                 MPI_Isend(message, 100, MPI_INT, dest, tag, MPI_COMM_WORLD, requests[my_rank]);
+      |                                                                             ~~~~~~~~^~~~~~~~~
+      |                                                                                     |
+      |                                                                                     MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1653:67: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1653 |                              int tag, MPI_Comm comm, MPI_Request *request);
+      |                                                      ~~~~~~~~~~~~~^~~~~~~
+../src/FPD_01b.c:48:34: warning: passing argument 1 of ‘MPI_Wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   48 |                 MPI_Wait(requests[my_rank], &status);
+      |                          ~~~~~~~~^~~~~~~~~
+      |                                  |
+      |                                  MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1903:42: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1903 | OMPI_DECLSPEC  int MPI_Wait(MPI_Request *request, MPI_Status *status);
+      |                             ~~~~~~~~~~~~~^~~~~~~
+../src/FPD_01b.c:54:55: warning: passing argument 7 of ‘MPI_Irecv’ from incompatible pointer type [-Wincompatible-pointer-types]
+   54 |                               MPI_COMM_WORLD, requests[my_rank]);
+      |                                               ~~~~~~~~^~~~~~~~~
+      |                                                       |
+      |                                                       MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1649:67: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1649 |                              int tag, MPI_Comm comm, MPI_Request *request);
+      |                                                      ~~~~~~~~~~~~~^~~~~~~
+../src/FPD_01b.c:55:42: warning: passing argument 1 of ‘MPI_Wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   55 |                         MPI_Wait(requests[my_rank],&status);
+      |                                  ~~~~~~~~^~~~~~~~~
+      |                                          |
+      |                                          MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1903:42: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1903 | OMPI_DECLSPEC  int MPI_Wait(MPI_Request *request, MPI_Status *status);
+      |                             ~~~~~~~~~~~~~^~~~~~~
+Finished building: ../src/FPD_01b.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+/usr/bin/ld: ./src/FPD_01b.o: in function `main':
+/home/dana/eclipse-workspace/FPD_01/Debug/../src/FPD_01b.c:14: multiple definition of `main'; ./src/FPD_01.o:/home/dana/eclipse-workspace/FPD_01/Debug/../src/FPD_01.c:14: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: FPD_01] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:02:18 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+/usr/bin/ld: ./src/FPD_01b.o: in function `main':
+/home/dana/eclipse-workspace/FPD_01/Debug/../src/FPD_01b.c:14: multiple definition of `main'; ./src/FPD_01.o:/home/dana/eclipse-workspace/FPD_01/Debug/../src/FPD_01.c:14: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: FPD_01] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:02:40 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+/usr/bin/ld: ./src/FPD_01b.o: in function `main':
+/home/dana/eclipse-workspace/FPD_01/Debug/../src/FPD_01b.c:14: multiple definition of `main'; ./src/FPD_01.o:/home/dana/eclipse-workspace/FPD_01/Debug/../src/FPD_01.c:14: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [makefile:43: FPD_01] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:03:16 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01.d" -MT"src/FPD_01.o" -o "src/FPD_01.o" "../src/FPD_01.c"
+Finished building: ../src/FPD_01.c
+ 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+../src/FPD_01b.c: In function ‘main’:
+../src/FPD_01b.c:46:77: error: invalid use of undefined type ‘struct ompi_request_t’
+   46 |                 MPI_Isend(message, 100, MPI_INT, dest, tag, MPI_COMM_WORLD, *requests[my_rank]);
+      |                                                                             ^~~~~~~~~~~~~~~~~~
+../src/FPD_01b.c:48:34: warning: passing argument 1 of ‘MPI_Wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   48 |                 MPI_Wait(requests[my_rank], &status);
+      |                          ~~~~~~~~^~~~~~~~~
+      |                                  |
+      |                                  MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1903:42: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1903 | OMPI_DECLSPEC  int MPI_Wait(MPI_Request *request, MPI_Status *status);
+      |                             ~~~~~~~~~~~~~^~~~~~~
+../src/FPD_01b.c:54:47: error: invalid use of undefined type ‘struct ompi_request_t’
+   54 |                               MPI_COMM_WORLD, *requests[my_rank]);
+      |                                               ^~~~~~~~~~~~~~~~~~
+../src/FPD_01b.c:55:42: warning: passing argument 1 of ‘MPI_Wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   55 |                         MPI_Wait(requests[my_rank],&status);
+      |                                  ~~~~~~~~^~~~~~~~~
+      |                                          |
+      |                                          MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1903:42: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1903 | OMPI_DECLSPEC  int MPI_Wait(MPI_Request *request, MPI_Status *status);
+      |                             ~~~~~~~~~~~~~^~~~~~~
+make: *** [src/subdir.mk:23: src/FPD_01b.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:03:31 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+../src/FPD_01b.c: In function ‘main’:
+../src/FPD_01b.c:48:34: warning: passing argument 1 of ‘MPI_Wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   48 |                 MPI_Wait(requests[my_rank], &status);
+      |                          ~~~~~~~~^~~~~~~~~
+      |                                  |
+      |                                  MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1903:42: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1903 | OMPI_DECLSPEC  int MPI_Wait(MPI_Request *request, MPI_Status *status);
+      |                             ~~~~~~~~~~~~~^~~~~~~
+../src/FPD_01b.c:54:47: error: invalid use of undefined type ‘struct ompi_request_t’
+   54 |                               MPI_COMM_WORLD, *requests[my_rank]);
+      |                                               ^~~~~~~~~~~~~~~~~~
+../src/FPD_01b.c:55:42: warning: passing argument 1 of ‘MPI_Wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   55 |                         MPI_Wait(requests[my_rank],&status);
+      |                                  ~~~~~~~~^~~~~~~~~
+      |                                          |
+      |                                          MPI_Request {aka struct ompi_request_t *}
+In file included from ../src/FPD_01b.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1903:42: note: expected ‘struct ompi_request_t **’ but argument is of type ‘MPI_Request’ {aka ‘struct ompi_request_t *’}
+ 1903 | OMPI_DECLSPEC  int MPI_Wait(MPI_Request *request, MPI_Status *status);
+      |                             ~~~~~~~~~~~~~^~~~~~~
+make: *** [src/subdir.mk:23: src/FPD_01b.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:03:48 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+Finished building: ../src/FPD_01b.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+Finished building target: FPD_01
+ 
+19:04:27 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+Finished building: ../src/FPD_01b.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+Finished building target: FPD_01
+ 
+19:05:04 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+Finished building: ../src/FPD_01b.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+Finished building target: FPD_01
+ 
+19:05:37 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+Finished building: ../src/FPD_01b.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+Finished building target: FPD_01
+ 
+19:05:52 **** Incremental Build of configuration Debug for project FPD_01 ****
+make all 
+Building file: ../src/FPD_01b.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01b.d" -MT"src/FPD_01b.o" -o "src/FPD_01b.o" "../src/FPD_01b.c"
+Finished building: ../src/FPD_01b.c
+ 
+Building target: FPD_01
+Invoking: GCC C Linker
+mpicc  -o "FPD_01" ./src/FPD_01.o ./src/FPD_01b.o   
+Finished building target: FPD_01
+ 
+19:07:40 **** Clean-only build of configuration Debug for project FPD_L01 ****
+make clean 
+rm -rf ./src/FPD_01.d ./src/FPD_01.o ./src/FPD_01b.d ./src/FPD_01b.o
+rm -rf FPD_01
+ 
+19:07:40 **** Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_01.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_01.d" -MT"src/FPD_01.o" -o "src/FPD_01.o" "../src/FPD_01.c"
+Finished building: ../src/FPD_01.c
+ 
+Building file: ../src/FPD_02.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_02.d" -MT"src/FPD_02.o" -o "src/FPD_02.o" "../src/FPD_02.c"
+Finished building: ../src/FPD_02.c
+ 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 
+20:02:30 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_02.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_02.d" -MT"src/FPD_02.o" -o "src/FPD_02.o" "../src/FPD_02.c"
+Finished building: ../src/FPD_02.c
+ 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+In file included from ../src/FPD_03.c:12:
+../src/FPD_03.c: In function ‘main’:
+/usr/include/openmpi-x86_64/mpi.h:402:47: warning: passing argument 7 of ‘MPI_Gather’ makes integer from pointer without a cast [-Wint-conversion]
+  402 | #define OMPI_PREDEFINED_GLOBAL(type, global) ((type) ((void *) &(global)))
+      |                                              ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               struct ompi_communicator_t *
+/usr/include/openmpi-x86_64/mpi.h:1140:24: note: in expansion of macro ‘OMPI_PREDEFINED_GLOBAL’
+ 1140 | #define MPI_COMM_WORLD OMPI_PREDEFINED_GLOBAL( MPI_Comm, ompi_mpi_comm_world)
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+../src/FPD_03.c:43:63: note: in expansion of macro ‘MPI_COMM_WORLD’
+   43 |         MPI_Gather(recv, 100, MPI_INT, message, 100, MPI_INT, MPI_COMM_WORLD);
+      |                                                               ^~~~~~~~~~~~~~
+/usr/include/openmpi-x86_64/mpi.h:1555:35: note: expected ‘int’ but argument is of type ‘struct ompi_communicator_t *’
+ 1555 |                               int root, MPI_Comm comm);
+      |                               ~~~~^~~~
+../src/FPD_03.c:43:9: error: too few arguments to function ‘MPI_Gather’
+   43 |         MPI_Gather(recv, 100, MPI_INT, message, 100, MPI_INT, MPI_COMM_WORLD);
+      |         ^~~~~~~~~~
+In file included from ../src/FPD_03.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1553:20: note: declared here
+ 1553 | OMPI_DECLSPEC  int MPI_Gather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+      |                    ^~~~~~~~~~
+../src/FPD_03.c:53:21: error: redefinition of ‘i’
+   53 |                 int i = 0;
+      |                     ^
+../src/FPD_03.c:46:21: note: previous definition of ‘i’ with type ‘int’
+   46 |                 int i = 0;
+      |                     ^
+../src/FPD_03.c:54:21: error: redefinition of ‘sum’
+   54 |                 int sum = 0;
+      |                     ^~~
+../src/FPD_03.c:47:21: note: previous definition of ‘sum’ with type ‘int’
+   47 |                 int sum = 0;
+      |                     ^~~
+../src/FPD_03.c:60:21: error: redefinition of ‘i’
+   60 |                 int i = 0;
+      |                     ^
+../src/FPD_03.c:53:21: note: previous definition of ‘i’ with type ‘int’
+   53 |                 int i = 0;
+      |                     ^
+../src/FPD_03.c:61:21: error: redefinition of ‘sum’
+   61 |                 int sum = 0;
+      |                     ^~~
+../src/FPD_03.c:54:21: note: previous definition of ‘sum’ with type ‘int’
+   54 |                 int sum = 0;
+      |                     ^~~
+../src/FPD_03.c:33:21: warning: unused variable ‘requests’ [-Wunused-variable]
+   33 |         MPI_Request requests[p];
+      |                     ^~~~~~~~
+../src/FPD_03.c:22:20: warning: unused variable ‘status’ [-Wunused-variable]
+   22 |         MPI_Status status ;   /* return status for receive */ // @suppress("Type cannot be resolved")
+      |                    ^~~~~~
+../src/FPD_03.c:19:13: warning: unused variable ‘tag’ [-Wunused-variable]
+   19 |         int tag=0;    /* tag for messages */
+      |             ^~~
+../src/FPD_03.c:18:13: warning: unused variable ‘dest’ [-Wunused-variable]
+   18 |         int dest;     /* rank of receiver */
+      |             ^~~~
+../src/FPD_03.c:17:13: warning: unused variable ‘source’ [-Wunused-variable]
+   17 |         int source;   /* rank of sender */
+      |             ^~~~~~
+make: *** [src/subdir.mk:26: src/FPD_03.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:04:08 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+In file included from ../src/FPD_03.c:12:
+../src/FPD_03.c: In function ‘main’:
+/usr/include/openmpi-x86_64/mpi.h:402:47: warning: passing argument 7 of ‘MPI_Gather’ makes integer from pointer without a cast [-Wint-conversion]
+  402 | #define OMPI_PREDEFINED_GLOBAL(type, global) ((type) ((void *) &(global)))
+      |                                              ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               struct ompi_communicator_t *
+/usr/include/openmpi-x86_64/mpi.h:1140:24: note: in expansion of macro ‘OMPI_PREDEFINED_GLOBAL’
+ 1140 | #define MPI_COMM_WORLD OMPI_PREDEFINED_GLOBAL( MPI_Comm, ompi_mpi_comm_world)
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+../src/FPD_03.c:43:63: note: in expansion of macro ‘MPI_COMM_WORLD’
+   43 |         MPI_Gather(recv, 100, MPI_INT, message, 100, MPI_INT, MPI_COMM_WORLD);
+      |                                                               ^~~~~~~~~~~~~~
+/usr/include/openmpi-x86_64/mpi.h:1555:35: note: expected ‘int’ but argument is of type ‘struct ompi_communicator_t *’
+ 1555 |                               int root, MPI_Comm comm);
+      |                               ~~~~^~~~
+../src/FPD_03.c:43:9: error: too few arguments to function ‘MPI_Gather’
+   43 |         MPI_Gather(recv, 100, MPI_INT, message, 100, MPI_INT, MPI_COMM_WORLD);
+      |         ^~~~~~~~~~
+In file included from ../src/FPD_03.c:12:
+/usr/include/openmpi-x86_64/mpi.h:1553:20: note: declared here
+ 1553 | OMPI_DECLSPEC  int MPI_Gather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+      |                    ^~~~~~~~~~
+../src/FPD_03.c:33:21: warning: unused variable ‘requests’ [-Wunused-variable]
+   33 |         MPI_Request requests[p];
+      |                     ^~~~~~~~
+../src/FPD_03.c:22:20: warning: unused variable ‘status’ [-Wunused-variable]
+   22 |         MPI_Status status ;   /* return status for receive */ // @suppress("Type cannot be resolved")
+      |                    ^~~~~~
+../src/FPD_03.c:19:13: warning: unused variable ‘tag’ [-Wunused-variable]
+   19 |         int tag=0;    /* tag for messages */
+      |             ^~~
+../src/FPD_03.c:18:13: warning: unused variable ‘dest’ [-Wunused-variable]
+   18 |         int dest;     /* rank of receiver */
+      |             ^~~~
+../src/FPD_03.c:17:13: warning: unused variable ‘source’ [-Wunused-variable]
+   17 |         int source;   /* rank of sender */
+      |             ^~~~~~
+make: *** [src/subdir.mk:26: src/FPD_03.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:05:21 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+../src/FPD_03.c: In function ‘main’:
+../src/FPD_03.c:33:21: warning: unused variable ‘requests’ [-Wunused-variable]
+   33 |         MPI_Request requests[p];
+      |                     ^~~~~~~~
+../src/FPD_03.c:22:20: warning: unused variable ‘status’ [-Wunused-variable]
+   22 |         MPI_Status status ;   /* return status for receive */ // @suppress("Type cannot be resolved")
+      |                    ^~~~~~
+../src/FPD_03.c:19:13: warning: unused variable ‘tag’ [-Wunused-variable]
+   19 |         int tag=0;    /* tag for messages */
+      |             ^~~
+../src/FPD_03.c:18:13: warning: unused variable ‘dest’ [-Wunused-variable]
+   18 |         int dest;     /* rank of receiver */
+      |             ^~~~
+../src/FPD_03.c:17:13: warning: unused variable ‘source’ [-Wunused-variable]
+   17 |         int source;   /* rank of sender */
+      |             ^~~~~~
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 
+20:05:38 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+../src/FPD_03.c: In function ‘main’:
+../src/FPD_03.c:29:21: warning: unused variable ‘requests’ [-Wunused-variable]
+   29 |         MPI_Request requests[p];
+      |                     ^~~~~~~~
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 
+20:05:45 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 
+20:06:14 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 
+20:06:43 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 
+20:07:20 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 

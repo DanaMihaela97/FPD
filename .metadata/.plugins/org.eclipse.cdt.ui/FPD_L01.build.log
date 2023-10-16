@@ -1,0 +1,15 @@
+20:07:20 **** Incremental Build of configuration Debug for project FPD_L01 ****
+make all 
+Building file: ../src/FPD_03.c
+Invoking: GCC C Compiler
+mpicc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FPD_03.d" -MT"src/FPD_03.o" -o "src/FPD_03.o" "../src/FPD_03.c"
+Finished building: ../src/FPD_03.c
+ 
+Building target: FPD_L01
+Invoking: GCC C Linker
+mpicc  -o "FPD_L01" ./src/FPD_01.o ./src/FPD_02.o ./src/FPD_03.o   
+Finished building target: FPD_L01
+ 
+
+20:07:21 Build Finished. 0 errors, 0 warnings. (took 415ms)
+
